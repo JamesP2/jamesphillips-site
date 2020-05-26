@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeCarouselSingle from "../components/homeCarouselSingle"
-import { Container, Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap"
 import FeaturetteImage from "../components/featuretteImage"
 
 const IndexPage = () => (
