@@ -11,19 +11,23 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./layout.css"
+import { Container } from "reactstrap"
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
+      <Container className="pad-top">
+        {children}
 
-      {children}
+        <hr />
 
-      <hr />
-
-      <footer>
-        © {new Date().getFullYear()} James Phillips. Last Updated May 2020
-      </footer>
+        <footer>
+          <p className="float-left">
+            © {new Date().getFullYear()} James Phillips. Last Updated May 2020
+          </p>
+        </footer>
+      </Container>
     </>
   )
 }

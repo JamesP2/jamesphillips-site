@@ -11,7 +11,6 @@ const IndexPage = () => (
     <HomeCarouselSingle />
     <Layout>
       <SEO title="Home" />
-      <Container className="marketing">
         <Row className="featurette">
           <Col md="7" style={{marginTop: "2em"}}>
             <p className="lead">
@@ -55,7 +54,6 @@ const IndexPage = () => (
             <FeaturetteImage src="img/home/2.jpg" alt="Marquee" />
           </Col>
         </Row>
-      </Container>
     </Layout>
   </>
 )

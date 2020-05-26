@@ -7,10 +7,8 @@ import { Container } from "reactstrap"
 const PreviousWorkPage = () => (
   <Layout>
     <SEO title="Previous Work" />
-    <Container className="pad-top">
-      <h2 className="thin">Previous Work</h2>
-      <p>Coming Soon.</p>
-    </Container>
+    <h2 className="thin">Previous Work</h2>
+    <p>Coming Soon.</p>
   </Layout>
 )
 
