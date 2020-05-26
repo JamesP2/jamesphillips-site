@@ -2,14 +2,19 @@
 
 This repository contains a website about me and my work.
 
-### How do I get set up? ###
+### Local Development ###
 
-You need a PHP-capable (5.6+) webserver (e.g. [XAMPP](https://www.apachefriends.org/index.html) for Windows) and [Composer](http://www.getcomposer.org). No database required.
+Install Gatsby CLI
 
-1. Clone this repository into your the document root of your webserver
+1. Clone this repository to environment
 
-2. Install dependencies and create config file:
+2. Install Gatsby CLI
 
     ```
-    composer install && cp config.sample.php config.php
+    npm install -g gatsby-cli
+    ```
+
+3. Start development server
+    ```
+    gatsby develop
     ```
