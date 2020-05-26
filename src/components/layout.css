@@ -1,6 +1,5 @@
-/* GLOBAL STYLES
+/* Layout
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
 html {
   overflow-y: scroll;
@@ -13,11 +12,31 @@ body {
 }
 
 .pad-top {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
+footer {
+  padding-bottom: 15px;
+  min-height: 75px;
+}
 
-/* CUSTOMIZE THE CAROUSEL
+.table {
+  color: #5a5a5a;
+}
+
+.text-grey {
+  color: #5a5a5a;
+}
+
+.navbar-brand {
+  margin-top: 4px;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+/* Carousel
 -------------------------------------------------- */
 
 /* Carousel base class */
@@ -27,6 +46,7 @@ body {
   margin-right: auto;
   max-width: 1920px;
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
@@ -38,6 +58,7 @@ body {
   height: 32rem;
   background-color: #777;
 }
+
 .carousel-item > img {
   position: absolute;
   top: 0;
@@ -48,21 +69,25 @@ body {
   height: 32rem;
 }
 
-.carousel-fade .carousel-item {
-	opacity: 0;
-	transition-duration: 0.5s;
-	transition-property: opacity;
+/* Fading items instead of sliding them (allows for easy image centering) */
+.carousel-fade .carousel-item,
+.transition {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-property: opacity;
 }
 
 .carousel-fade .carousel-item.active,
 .carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right {
-	opacity: 1;
+.carousel-fade .carousel-item-prev.carousel-item-right,
+.visible {
+  opacity: 1;
 }
 
 .carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-right {
-	opacity: 0;
+.carousel-fade .active.carousel-item-right,
+.hidden {
+  opacity: 0;
 }
 
 .carousel-fade .carousel-item-next,
@@ -70,8 +95,8 @@ body {
 .carousel-fade .carousel-item.active,
 .carousel-fade .active.carousel-item-left,
 .carousel-fade .active.carousel-item-prev {
-	transform: translateX(0);
-	transform: translate3d(0, 0, 0);
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* Featurettes
@@ -86,15 +111,14 @@ body {
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -.05rem;
+  letter-spacing: -0.05rem;
 }
 
 .thin {
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -.05rem;
+  letter-spacing: -0.05rem;
 }
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -118,31 +142,11 @@ body {
   }
 }
 
-.gallery {
-    margin-bottom: 15px;
-}
-
-footer {
-    padding-bottom: 15px;
-    min-height: 75px;
-}
-
-.bio {
-    text-align: center;
-}
-
-.table {
-    color: #5a5a5a;
-}
-
-.text-grey {
-    color: #5a5a5a;
-}
-
-.navbar-brand {
-  margin-top: 4px;
-}
-
-.navbar-brand img {
-  height: 40px;
+/* Transitions */
+.ease {
+  opacity: 0;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
