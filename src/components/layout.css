@@ -2,6 +2,10 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   padding-top: 70px;
   padding-bottom: 3rem;
