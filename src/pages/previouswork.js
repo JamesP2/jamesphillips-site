@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Carousel, { Modal, ModalGateway } from "react-images"
 import Gallery from "react-photo-gallery"
 import CategoryButton from "../components/categoryButton"
-import { Motion, spring } from "react-motion"
+import { Fade } from "reactstrap"
 
 const photos = [
   {
@@ -110,14 +110,18 @@ const PreviousWorkPage = () => {
   const handleCategoryChange = event => {
     const category = event.target.attributes.getNamedItem("data-category").value
     setSelectedCategory(category)
-    refreshPhotos(category)
+    setGalleryVisible(false)
+  }
+
+  const handleGalleryFade = event => {
+    refreshPhotos(selectedCategory)
+    setGalleryVisible(true)
   }
 
   const refreshPhotos = category => {
     const newPhotos = []
 
-    if (category === "all")
-      return setCurrentPhotos([...photos])
+    if (category === "all") return setCurrentPhotos([...photos])
 
     photos.forEach(photo => {
       if (photo.category === category) newPhotos.push(photo)
@@ -162,7 +166,9 @@ const PreviousWorkPage = () => {
           buttonText="Corporate"
         />{" "}
       </p>
-      <Gallery photos={currentPhotos} onClick={openLightbox} />
+      <Fade in={galleryVisible} onExited={handleGalleryFade}>
+        <Gallery photos={currentPhotos} onClick={openLightbox} />
+      </Fade>
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
