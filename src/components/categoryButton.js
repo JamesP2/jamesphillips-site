@@ -13,6 +13,7 @@ const CategoryButton = ({
       color={category === selectedCategory ? "primary" : "secondary"}
       onClick={handleClick}
       data-category={category}
+      className="mx-1"
     >
       {buttonText}
     </Button>

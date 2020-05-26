@@ -12,7 +12,7 @@ body {
 }
 
 .pad-top {
-  padding-top: 10px;
+  padding-top: 2em;
 }
 
 footer {
@@ -116,7 +116,6 @@ footer {
 
 .thin {
   font-weight: 300;
-  line-height: 1;
   letter-spacing: -0.05rem;
 }
 
