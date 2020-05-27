@@ -11,6 +11,11 @@ body {
   color: #5a5a5a;
 }
 
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .pad-top {
   padding-top: 2em;
 }
