@@ -140,15 +140,3 @@ footer {
     margin-top: 3rem;
   }
 }
-
-/* Image Gallery */
-.slideIn {
-  max-width: 1000px;
-  transition: max-width 0.4s ease-in-out;
-}
-
-.slideOut {
-  max-width: 0;
-  transition: max-width 0.4s ease-in-out;
-  overflow: hidden;
-}

@@ -3,12 +3,14 @@ import Carousel, { Modal, ModalGateway } from "react-images"
 import Gallery from "react-photo-gallery"
 import CategoryButton from "../components/categoryButton"
 import { Fade } from "reactstrap"
+import GalleryImage from "./galleryImage"
 
 const FilterGallery = ({ photos, categories }) => {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [currentPhotos, setCurrentPhotos] = useState(photos)
+
   const [galleryVisible, setGalleryVisible] = useState(true)
 
   const openLightbox = useCallback((event, { photo, index }) => {
@@ -63,24 +65,27 @@ const FilterGallery = ({ photos, categories }) => {
             handleClick={handleCategoryChange}
             selectedCategory={selectedCategory}
             buttonText={category.title}
+            key={category.id}
           />
         ))}
       </p>
       <Fade in={galleryVisible} onExited={handleGalleryFade}>
-        <Gallery photos={currentPhotos} onClick={openLightbox} />
+        <Gallery
+          photos={currentPhotos}
+          onClick={openLightbox}
+          renderImage={props => <GalleryImage {...props} />}
+        />
       </Fade>
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={currentPhotos
-                .filter(x => x.className !== "slideOut")
-                .map(x => ({
-                  ...x,
-                  srcset: x.srcSet,
-                  caption: getCaption(x),
-                }))}
+              views={currentPhotos.map(x => ({
+                ...x,
+                srcset: x.srcSet,
+                caption: getCaption(x),
+              }))}
             />
           </Modal>
         ) : null}

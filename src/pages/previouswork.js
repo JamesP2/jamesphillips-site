@@ -5,21 +5,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FilterGallery from "../components/filterGallery"
 
-const PreviousWorkPage = ({ data }) => {
-  console.log(data)
-  return (
-    <Layout>
-      <SEO title="Previous Work" />
+const PreviousWorkPage = ({ data }) => (
+  <Layout>
+    <SEO title="Previous Work" />
 
-      <h2 className="thin">Previous Work</h2>
+    <h2 className="thin">Previous Work</h2>
 
-      <FilterGallery
-        photos={data.dataJson.previousWorkGallery.photos}
-        categories={data.dataJson.previousWorkGallery.categories}
-      />
-    </Layout>
-  )
-}
+    <FilterGallery
+      photos={data.dataJson.previousWorkGallery.photos}
+      categories={data.dataJson.previousWorkGallery.categories}
+    />
+  </Layout>
+)
 
 export const query = graphql`
   {
