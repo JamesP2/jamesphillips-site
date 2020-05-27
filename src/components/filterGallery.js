@@ -51,7 +51,7 @@ const FilterGallery = ({ photos, categories }) => {
       <h1>{photo.title}</h1>
       <p>{photo.description}</p>
       <p>
-        <small>Photo: {photo.credits}</small>
+        <small>{photo.credits}</small>
       </p>
     </>
   )
