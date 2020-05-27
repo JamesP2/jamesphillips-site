@@ -25,7 +25,7 @@ const GalleryImage = ({
   if (mouseEntered)
     imageStyle = {
       ...imageStyle,
-      transform: "scale(1.1) rotate(-5deg)",
+      transform: "scale(1.1) rotate(-1deg)",
       filter: "saturate(1.3)",
     }
 
