@@ -6,8 +6,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
 } from "reactstrap"
+import LogoImage from "../content/images/logo.png"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +19,7 @@ const Header = () => {
     <>
       <Navbar color="dark" dark expand="md" fixed="top">
         <NavbarBrand href="/">
-          <img src="/img/logo.png" alt="logo" />
+          <img src={LogoImage} alt="logo" />
           <strong style={{ paddingLeft: "0.8em" }}>James Phillips</strong>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
