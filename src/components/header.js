@@ -8,7 +8,7 @@ import {
   Nav,
   NavItem,
 } from "reactstrap"
-import LogoImage from "../content/images/logo.png"
+import LogoImage from "../content/images/logo.svg"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
