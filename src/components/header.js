@@ -19,7 +19,7 @@ const Header = () => {
     <>
       <Navbar color="dark" dark expand="md" fixed="top">
         <NavbarBrand href="/">
-          <img src={LogoImage} alt="logo" />
+          <img src={LogoImage} alt="logo" width="53px" />
           <strong style={{ paddingLeft: "0.8em" }}>James Phillips</strong>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
