@@ -10,11 +10,13 @@ const PreviousWorkPage = ({ data }) => (
     <SEO title="Previous Work" />
 
     <h2 className="thin">Previous Work</h2>
-
+    <p>Coming Soon.</p>
+    {/* 
     <FilterGallery
       photos={data.dataJson.previousWorkGallery.photos}
       categories={data.dataJson.previousWorkGallery.categories}
-    />
+    /> 
+    */}
   </Layout>
 )
 
