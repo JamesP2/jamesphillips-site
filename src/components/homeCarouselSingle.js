@@ -47,6 +47,7 @@ const HomeCarouselSingle = props => {
             <Img
               style={{ position: "static" }}
               fixed={image.node.childImageSharp.fixed}
+              alt={item.altText}
               placeholderClassName="carousel-image"
             />
             <div className="carousel-caption text-left">
