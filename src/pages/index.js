@@ -33,7 +33,7 @@ const IndexPage = () => (
             </ul>
           </Col>
           <Col md="5">
-            <FeaturetteImage src="img/home/1.jpg" alt="Desk" />
+            <FeaturetteImage src="images/home/1.jpg" alt="Desk" />
           </Col>
         </Row>
         <hr className="featurette-divider" />
@@ -51,7 +51,7 @@ const IndexPage = () => (
             </p>
           </Col>
           <Col md={{ size: 5, order: 1 }}>
-            <FeaturetteImage src="img/home/2.jpg" alt="Marquee" />
+            <FeaturetteImage src="images/home/2.jpg" alt="Marquee" />
           </Col>
         </Row>
     </Layout>
