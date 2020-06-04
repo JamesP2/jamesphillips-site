@@ -64,7 +64,7 @@ footer {
   background-color: #777;
 }
 
-.carousel-item > img {
+.carousel-image {
   position: absolute;
   top: 0;
   left: -9999px;
