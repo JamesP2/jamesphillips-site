@@ -26,8 +26,7 @@ const IndexPage = () => (
                 Lighting Programmer/Operation (with own Console if desired)
               </li>
               <li>
-                Pre-Production Drawings, CAD and Site Plans (with own WYSIWYG
-                Report Licence)
+                Pre-Production Drawings, CAD and Site Plans
               </li>
               <li>LED/Video Engineer</li>
             </ul>
