@@ -32,7 +32,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <Link
-                to="/experience"
+                to="/experience/"
                 activeClassName="active"
                 className="nav-link"
               >
@@ -41,7 +41,7 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <Link
-                to="/previouswork"
+                to="/previouswork/"
                 activeClassName="active"
                 className="nav-link"
               >
