@@ -8,7 +8,7 @@ import ExtLink from "../components/extLink"
 const ExperiencePage = () => (
   <>
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Experience" />
       <Col md="12">
         <h2 className="thin">Experience</h2>
         <Row>
