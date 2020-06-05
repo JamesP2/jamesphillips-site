@@ -6,10 +6,11 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
 } from "reactstrap"
+import LogoImage from "../content/images/logo.svg"
 
-const Header = () => {
+const SiteNav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -18,22 +19,23 @@ const Header = () => {
     <>
       <Navbar color="dark" dark expand="md" fixed="top">
         <NavbarBrand href="/">
-          <img src="/img/logo.png" alt="logo" />
+          <img src={LogoImage} alt="logo" width="53px" />
           <strong style={{ paddingLeft: "0.8em" }}>James Phillips</strong>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/" activeClassName="active" className="nav-link">
+              <Link to="/" className="nav-link" activeClassName="active">
                 Home
               </Link>
             </NavItem>
             <NavItem>
               <Link
                 to="/experience"
-                activeClassName="active"
                 className="nav-link"
+                activeClassName="active"
+                partiallyActive={true}
               >
                 Experience
               </Link>
@@ -41,8 +43,9 @@ const Header = () => {
             <NavItem>
               <Link
                 to="/previouswork"
-                activeClassName="active"
                 className="nav-link"
+                activeClassName="active"
+                partiallyActive={true}
               >
                 Previous Work
               </Link>
@@ -54,4 +57,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default SiteNav

@@ -1,13 +1,34 @@
 import React from "react"
+import { useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 const FeaturetteImage = ({ src, alt }) => {
-  // TODO Do this with Gatsby-Image
+  const data = useStaticQuery(graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fluid(maxWidth: 300, maxHeight: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const image = data.images.edges.find(n => n.node.relativePath.includes(src))
+
   return (
-    <img
-      className="featurette-image img-fluid mx-auto"
-      src={src}
+    <Img
+      fluid={image.node.childImageSharp.fluid}
       alt={alt}
-      style={{ width: "300px", height: "300px" }}
+      className="mx-auto"
+      style={{ width: 300, height: 300 }}
     />
   )
 }

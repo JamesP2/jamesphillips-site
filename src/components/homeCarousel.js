@@ -1,16 +1,16 @@
 import React, { useState } from "react"
 import {
-  Button,
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
 } from "reactstrap"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 const items = [
   {
-    src: "/img/carousel/1.jpg",
+    src: "images/carousel/1.jpg",
     altText: "Lighting Console",
     header: "James Phillips",
     caption: "Freelance Lighting and Event Engineer",
@@ -18,7 +18,7 @@ const items = [
     buttonLink: "/experience",
   },
   {
-    src: "/img/carousel/2.jpg",
+    src: "images/carousel/2.jpg",
     altText: "Corporate",
     header: "Event Lighting",
     caption: "Full service including Renders, Paperwork and Desk Programming",
@@ -26,7 +26,7 @@ const items = [
     buttonLink: "/previouswork",
   },
   {
-    src: "/img/carousel/3.jpg",
+    src: "images/carousel/3.jpg",
     altText: "Something Else",
     header: "Something Else",
     caption: "Hello",
@@ -56,14 +56,41 @@ const HomeCarousel = props => {
     setActiveIndex(newIndex)
   }
 
+  const data = useStaticQuery(graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fixed(width: 1920, height: 512) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   const slides = items.map(item => {
+    const image = data.images.edges.find(n =>
+      n.node.relativePath.includes(item.src)
+    )
+
     return (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} />
+        <Img
+          style={{ position: "static" }}
+          fixed={image.node.childImageSharp.fixed}
+          alt={item.altText}
+          placeholderClassName="carousel-image"
+        />
         <div className="carousel-caption text-left">
           <h1>{item.header}</h1>
           <p>{item.caption}</p>

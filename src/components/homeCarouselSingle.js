@@ -1,9 +1,10 @@
 import React from "react"
 import { CarouselItem } from "reactstrap"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 const item = {
-  src: "/img/carousel/1.jpg",
+  src: "images/carousel/1.jpg",
   altText: "Lighting Console",
   header: "James Phillips",
   caption: "Freelance Lighting and Event Engineer",
@@ -12,12 +13,39 @@ const item = {
 }
 
 const HomeCarouselSingle = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fixed(width: 1920, height: 512) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const image = data.images.edges.find(n =>
+    n.node.relativePath.includes(item.src)
+  )
+
   return (
     <>
       <div className="carousel">
         <div className="carousel-inner">
           <CarouselItem className="active">
-            <img src={item.src} alt={item.altText} />
+            <Img
+              style={{ position: "static" }}
+              fixed={image.node.childImageSharp.fixed}
+              alt={item.altText}
+              placeholderClassName="carousel-image"
+            />
             <div className="carousel-caption text-left">
               <h1>{item.header}</h1>
               <p>{item.caption}</p>

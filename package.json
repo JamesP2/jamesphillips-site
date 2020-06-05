@@ -12,14 +12,18 @@
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-source-filesystem": "^2.3.4",
+    "gatsby-transformer-json": "^2.4.3",
     "gatsby-transformer-sharp": "^2.5.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
+    "react-images": "^1.1.7",
+    "react-photo-gallery": "^8.0.0",
     "reactstrap": "^8.4.1"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.38",
     "prettier": "2.0.5"
   },
   "keywords": [
