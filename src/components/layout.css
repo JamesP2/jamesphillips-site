@@ -67,7 +67,7 @@ footer {
 .carousel-image {
   position: absolute;
   top: 0;
-  left: -9999px;
+  left: -9999px !important;
   right: -9999px;
   margin: auto;
   min-width: 100%;
