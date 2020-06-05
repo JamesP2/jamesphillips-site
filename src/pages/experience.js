@@ -12,7 +12,7 @@ const ExperienceEntry = ({ date, entry, name, children }) => {
     date == null ? (
       <p className="font-weight-bold">{name}</p>
     ) : (
-      <p className="text-lg-right">{date}</p>
+      <p className="text-md-right">{date}</p>
     )
   return (
     <Row>
