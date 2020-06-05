@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Row, Col, Table } from "reactstrap"
 import ExtLink from "../components/extLink"
+import ExperienceEntry from "../components/experienceEntry"
+import ExperienceHeader from "../components/experienceHeader"
 
 const ExperiencePage = () => (
   <>
@@ -21,7 +23,7 @@ const ExperiencePage = () => (
         </Row>
         <Row>
           <Col md="12">
-            <Table borderless>
+            <Table borderless responsive>
               <tbody>
                 <tr>
                   <th>
@@ -89,138 +91,99 @@ const ExperiencePage = () => (
         <hr />
 
         <h2 className="thin">Previous Events</h2>
-        <Row>
-          <Col md="12">
-            <Table borderless size="sm">
-              <tbody>
-                <tr>
-                  <th colSpan="2">Production Management</th>
-                </tr>
-                <tr>
-                  <td className="text-right">2017 - 2019</td>
-                  <td>
-                    Christmas Live at Doncaster Racecourse for SVL Hire (also
-                    Lighting Design)
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2017 - 2019</td>
-                  <td>
-                    University of Manchester Graduation Ball for University of
-                    Manchester Students Union
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2018</td>
-                  <td>
-                    DoubleTree By Hilton Hull Grand Opening June for SVL Hire
-                    (also Lighting Design)
-                  </td>
-                </tr>
-                <tr>
-                  <th colSpan="2">Lighting Design</th>
-                </tr>
-                <tr>
-                  <td className="text-right">2020</td>
-                  <td>
-                    Queen Symphonic: A Rock Orchestra Experience UK Tour for dBS
-                    Solutions
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2018 - 2019</td>
-                  <td>
-                    Various themed private marquee parties &amp; weddings for
-                    SVL Hire
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2018</td>
-                  <td>Hearing Fund UK Annual Gala for Bells Backline</td>
-                </tr>
-                <tr>
-                  <td className="text-right">2016</td>
-                  <td>
-                    ABC &amp; Support at Easterbrook Hall Dumfries for SVL Hire
-                  </td>
-                </tr>
-                <tr>
-                  <th colSpan="2">Console Operator</th>
-                </tr>
-                <tr>
-                  <td className="text-right">2018 - 2020</td>
-                  <td>Message Trust Higher Tours for MTS Live</td>
-                </tr>
-                <tr>
-                  <td className="text-right">2017 - 2019</td>
-                  <td>Ireby Folk Festival Cumbria for SVL Hire</td>
-                </tr>
+        <ExperienceHeader name="Production Management" />
+        <ExperienceEntry
+          date="2017 - 2019"
+          entry="Christmas Live at Doncaster Racecourse for SVL Hire (also
+                    Lighting Design)"
+        />
+        <ExperienceEntry
+          date="2017 - 2019"
+          entry="University of Manchester Graduation Ball for University of
+          Manchester Students Union"
+        />
+        <ExperienceEntry
+          date="2018"
+          entry="DoubleTree By Hilton Hull Grand Opening June for SVL Hire
+          (also Lighting Design)"
+        />
 
-                <tr>
-                  <td className="text-right">2018</td>
-                  <td>
-                    Kevin and Karen Dance Tour (Cover Engineer/Operator) for
-                    Adam Nicholls
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2015 - 2017</td>
-                  <td>Christmas Live at Doncaster Racecourse for SVL Hire</td>
-                </tr>
-                <tr>
-                  <th colSpan="2">Lighting Engineer</th>
-                </tr>
-                <tr>
-                  <td className="text-right">2018 &amp; 2019</td>
-                  <td>Warrington Music Festival for dBS Solutions</td>
-                </tr>
-                <tr>
-                  <td className="text-right">2019</td>
-                  <td>
-                    Ultimate Strongman: Team World Championship Nottingham Arena
-                    for MTS Live
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2013 - 2016, 2018 - 2019</td>
-                  <td>
-                    Lowther Castle halloween architectural lighting for SVL Hire
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2019</td>
-                  <td>
-                    After Races entertainment at Haydock Park &amp; York
-                    Racecourses for Audiorent Clair AG
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2015</td>
-                  <td>
-                    Status Quo at Queen of the South FC June (and House Console
-                    Operator) or SVL Hire
-                  </td>
-                </tr>
+        <ExperienceHeader name="Lighting Design" />
+        <ExperienceEntry
+          date="2020"
+          entry="Queen Symphonic: A Rock Orchestra Experience UK Tour for dBS
+          Solutions"
+        />
+        <ExperienceEntry
+          date="2018 - 2019"
+          entry="Various themed private marquee parties &amp; weddings for
+          SVL Hire"
+        />
+        <ExperienceEntry
+          date="2018"
+          entry="Hearing Fund UK Annual Gala for Bells Backline"
+        />
+        <ExperienceEntry
+          date="2016"
+          entry="ABC &amp; Support at Easterbrook Hall Dumfries for SVL Hire"
+        />
 
-                <tr>
-                  <th colSpan="2">LED Screen Engineer</th>
-                </tr>
-                <tr>
-                  <td className="text-right">2019 - 2020</td>
-                  <td>
-                    Giants Live Strongest Man competitions in various UK Arenas
-                    for MTS Live (Chauvet PVP5)
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-right">2019</td>
-                  <td>Various corporate events for Sparq (Absen A3 Pro)</td>
-                </tr>
-              </tbody>
-            </Table>
-          </Col>
-        </Row>
+        <ExperienceHeader name="Console Operator" />
+        <ExperienceEntry
+          date="2018 - 2020"
+          entry="Message Trust Higher Tours for MTS Live"
+        />
+        <ExperienceEntry
+          date="2017 - 2019"
+          entry="Ireby Folk Festival Cumbria for SVL Hire"
+        />
+        <ExperienceEntry
+          date="2018"
+          entry="Kevin and Karen Dance Tour (Cover Engineer/Operator) for
+          Adam Nicholls"
+        />
+        <ExperienceEntry
+          date="2015 - 2017"
+          entry="Christmas Live at Doncaster Racecourse for SVL Hire"
+        />
 
+        <ExperienceHeader name="Lighting Engineer" />
+        <ExperienceEntry
+          date="2018 - 2019"
+          entry="Warrington Music Festival for dBS Solutions"
+        />
+        <ExperienceEntry
+          date="2019"
+          entry="Ultimate Strongman: Team World Championship Nottingham Arena
+          for MTS Live"
+        />
+        <ExperienceEntry
+          date="2013 - 2016, 2018 - 2019"
+          entry="Lowther Castle halloween architectural lighting for SVL Hire"
+        />
+        <ExperienceEntry
+          date="2019"
+          entry="After Races entertainment at Haydock Park &amp; York
+          Racecourses for Audiorent Clair AG"
+        />
+        <ExperienceEntry
+          date="2015"
+          entry="Status Quo at Queen of the South FC June (and House Console
+          Operator) or SVL Hire"
+        />
+
+        <ExperienceHeader name="LED Screen Engineer" />
+        <ExperienceEntry
+          date="2019 - 2020"
+          entry="Giants Live Strongest Man competitions in various UK Arenas for MTS Live (Chauvet PVP5)
+          "
+        />
+        <ExperienceEntry
+          date="2019"
+          entry="Various corporate events for Sparq (Absen A3 Pro)
+          "
+        />
+        
         <hr />
 
         <h2 className="thin">Employment History</h2>
