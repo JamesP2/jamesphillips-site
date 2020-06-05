@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Row, Col } from "reactstrap"
+import { Row, Col, Table } from "reactstrap"
 import ExtLink from "../components/extLink"
 
 const ExperiencePage = () => (
@@ -10,68 +10,239 @@ const ExperiencePage = () => (
     <Layout>
       <SEO title="Home" />
       <Col md="12">
-        <h2 className="thin">Experience</h2>
+        <p className="text-center">
+          For a PDF CV please click <a href="#">here</a>.
+        </p>
 
+        <h2 className="thin">Experience</h2>
         <Row>
-          <Col sm="3">
+          <Col md="12">
             <p>
-              <b>
-                <ExtLink href="http://www.svlhire.co.uk/" text="SVL Hire Ltd" />
-              </b>
-              <br />
-              Freelance
-              <br />
-              2013 - Date
-            </p>
-          </Col>
-          <Col sm="9">
-            <p>
-              Originally starting in the warehouse I now manage and design a
-              number of projects each year as well as regularly working as a
-              Lighting Engineer and in the Warehouse when required.
+              A selection of roles I have undertaken with various companies
+              include:
             </p>
           </Col>
         </Row>
+        <Row>
+          <Col md="12">
+            <Table borderless>
+              <tbody>
+                <tr>
+                  <th>
+                    <ExtLink href="http://www.mtslive.co.uk/" text="MTS Live" />
+                  </th>
+                  <td>
+                    Lighting Design &amp; Engineer, <br />
+                    LED Screen Engineer, A/V, Audio <br />
+                    Warehouse
+                  </td>
+                  <th>
+                    <ExtLink
+                      href="https://www.lightinitiative.com/"
+                      text="Light Initiative"
+                    />
+                  </th>
+                  <td>
+                    Lighting Engineer, <br />
+                    (TV Set LED Installation)
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <ExtLink
+                      href="http://www.svlhire.co.uk/"
+                      text="SVL Hire Ltd"
+                    />
+                  </th>
+                  <td>
+                    Lighting Design &amp; Engineer, <br />
+                    Production Management
+                  </td>
+                  <th>
+                    <ExtLink
+                      href="https://www.audiorentclair.com/"
+                      text="AudioRent Clair"
+                    />
+                  </th>
+                  <td>Lighting Engineer</td>
+                </tr>
+                <tr>
+                  <th>
+                    <ExtLink
+                      href="http://www.dbs-solutions.co.uk/"
+                      text="dBS Solutions"
+                    />
+                  </th>
+                  <td>
+                    Lighting Design &amp; Engineer, <br />
+                    General Tech
+                  </td>
+                  <th>
+                    <ExtLink href="https://www.sparq.live/" text="Sparq" />
+                  </th>
+                  <td>
+                    LED Screen Engineer, <br />
+                    A/V Engineer
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+
+        <hr />
+
+        <h2 className="thin">Previous Events</h2>
+        <Row>
+          <Col md="12">
+            <Table borderless size="sm">
+              <tbody>
+                <tr>
+                  <th colSpan="2">Production Management</th>
+                </tr>
+                <tr>
+                  <td class="text-right">2017 - 2019</td>
+                  <td>
+                    Christmas Live at Doncaster Racecourse for SVL Hire (also
+                    Lighting Design)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2017 - 2019</td>
+                  <td>
+                    University of Manchester Graduation Ball for University of
+                    Manchester Students Union
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2018</td>
+                  <td>
+                    DoubleTree By Hilton Hull Grand Opening June for SVL Hire
+                    (also Lighting Design)
+                  </td>
+                </tr>
+                <tr>
+                  <th colSpan="2">Lighting Design</th>
+                </tr>
+                <tr>
+                  <td class="text-right">2020</td>
+                  <td>
+                    Queen Symphonic: A Rock Orchestra Experience UK Tour for dBS
+                    Solutions
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2018 - 2019</td>
+                  <td>
+                    Various themed private marquee parties &amp; weddings for
+                    SVL Hire
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2018</td>
+                  <td>Hearing Fund UK Annual Gala for Bells Backline</td>
+                </tr>
+                <tr>
+                  <td class="text-right">2016</td>
+                  <td>
+                    ABC &amp; Support at Easterbrook Hall Dumfries for SVL Hire
+                  </td>
+                </tr>
+                <tr>
+                  <th colSpan="2">Console Operator</th>
+                </tr>
+                <tr>
+                  <td class="text-right">2018 - 2020</td>
+                  <td>Message Trust Higher Tours for MTS Live</td>
+                </tr>
+                <tr>
+                  <td class="text-right">2017 - 2019</td>
+                  <td>Ireby Folk Festival Cumbria for SVL Hire</td>
+                </tr>
+
+                <tr>
+                  <td class="text-right">2018</td>
+                  <td>
+                    Kevin and Karen Dance Tour (Cover Engineer/Operator) for
+                    Adam Nicholls
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2015 - 2017</td>
+                  <td>Christmas Live at Doncaster Racecourse for SVL Hire</td>
+                </tr>
+                <tr>
+                  <th colSpan="2">Lighting Engineer</th>
+                </tr>
+                <tr>
+                  <td class="text-right">2018 &amp; 2019</td>
+                  <td>Warrington Music Festival for dBS Solutions</td>
+                </tr>
+                <tr>
+                  <td class="text-right">2019</td>
+                  <td>
+                    Ultimate Strongman: Team World Championship Nottingham Arena
+                    for MTS Live
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2013 - 2016, 2018 - 2019</td>
+                  <td>
+                    Lowther Castle halloween architectural lighting for SVL Hire
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2019</td>
+                  <td>
+                    After Races entertainment at Haydock Park &amp; York
+                    Racecourses for Audiorent Clair AG
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2015</td>
+                  <td>
+                    Status Quo at Queen of the South FC June (and House Console
+                    Operator) or SVL Hire
+                  </td>
+                </tr>
+
+                <tr>
+                  <th colSpan="2">LED Screen Engineer</th>
+                </tr>
+                <tr>
+                  <td class="text-right">2019 - 2020</td>
+                  <td>
+                    Giants Live Strongest Man competitions in various UK Arenas
+                    for MTS Live (Chauvet PVP5)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-right">2019</td>
+                  <td>Various corporate events for Sparq (Absen A3 Pro)</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+
+        <hr />
+
+        <h2 className="thin">Employment History</h2>
 
         <Row>
           <Col sm="3">
             <p>
-              <b>
-                <ExtLink href="http://www.mtslive.co.uk/" text="MTS Live" />
-              </b>
-              <br />
-              Freelance
+              <b>Freelance</b>
               <br />
               2017 - Date
             </p>
           </Col>
           <Col sm="9">
             <p>
-              I have worked on a large number of projects in various Lighting,
-              LED/Video and Audio roles as well as carrying out Warehouse work
-              when required including servicing and PAT Testing of Lighting,
-              Audio and Video Equipment.
+              Working on a wide range of projects for several clients including
+              live events/concerts, corporate awards dinners &amp; conferences,
+              theatre and TV.
             </p>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>
-                <ExtLink
-                  href="http://www.dbs-solutions.co.uk/"
-                  text="dBS Solutions"
-                />
-              </b>
-              <br />
-              Freelance
-              <br />
-              2018 - Date
-            </p>
-          </Col>
-          <Col sm="9">
-            <p>Lighting Engineer for various projects.</p>
           </Col>
         </Row>
 
@@ -95,12 +266,12 @@ const ExperiencePage = () => (
               Working during the Edinburgh Fringe as a venue
               technician/Technical Manager and providing support year-round to
               the core technical team.
-              <br />
-              Managing teams of technicians responsible for day to day operation
-              of 4 stages across 2 busy venues
-              <br />
-              Maintaining lighting, power and rigging plans for spaces
             </p>
+            <p>
+              Managing teams of technicians responsible for day to day operation
+              of 4 stages across 2 busy venues.
+            </p>
+            <p>Maintaining lighting, power and rigging plans for spaces.</p>
           </Col>
         </Row>
 
@@ -121,25 +292,47 @@ const ExperiencePage = () => (
           </Col>
           <Col sm="9">
             <p>
-              Under my direction MUTTS provided production support and equipment
-              to over 40 student-led events during 2016-17 including musical
-              theatre shows, drama, live events, the Student Union's Music
-              Festival and the annual Graduation Ball
+              Managing technical support and equipment hire for upwards of 40
+              mostly student-led events ranging from small theatrical
+              performances to a music festival.
             </p>
             <p>
-              {" "}
-              Duties Included:
+              Meeting clients to determine their needs and design full
+              production packages for upcoming projects.
+            </p>
+            <p>
+              Now an alumni member I provide training to new and existing
+              members to help inspire them to take an interest in the industry.
+            </p>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col sm="3">
+            <p>
+              <b>
+                <ExtLink href="http://www.svlhire.co.uk/" text="SVL Hire Ltd" />
+              </b>
               <br />
-              Meeting with clients to determine their needs for upcoming
-              projects
+              Casual Technician
               <br />
-              Design of Lighting and Sound packages to suit requirements and
-              budget
-              <br />
-              Planning of equipment transport and crew needs for each event
-              <br />
-              Supervision of equipment installation on site
-              <br />
+              2013 - 2017
+            </p>
+          </Col>
+          <Col sm="9">
+            <p>
+              Programming &amp; operation of lighting installations using
+              Chamsys MagicQ consoles
+            </p>
+            <p>
+              Installation of production equipment, planning distribution of
+              power &amp; data for projects and producing lighting designs when
+              required.
+            </p>
+            <p>
+              Undertaking regular warehouse work including preparation of
+              equipment for jobs and maintenance of intelligent &amp; generic
+              lighting fixtures.
             </p>
           </Col>
         </Row>
@@ -188,117 +381,6 @@ const ExperiencePage = () => (
               <b>March 2017</b> UK Rigging Training: Three Day Rigging for the
               Entertainment Industry
             </p>
-          </Col>
-        </Row>
-
-        <hr />
-
-        <h2 className="thin">Notable Events</h2>
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>Production Management</b>
-            </p>
-          </Col>
-          <Col sm="9">
-            <ul class="list-unstyled">
-              <li>
-                Christmas Live at Doncaster Racecourse (and Lighting Design) -
-                2017, 2018, 2019 for SVL Hire
-              </li>
-              <li>
-                DoubleTree By Hilton Hull Grand Opening June (and Lighting
-                Design/Op) - 2018 for SVL Hire
-              </li>
-              <li>
-                University of Manchester Graduation Ball - 2017 &amp; 2018 for
-                University of Manchester Students Union
-              </li>
-            </ul>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>Lighting Design</b>
-            </p>
-          </Col>
-          <Col sm="9">
-            <ul class="list-unstyled">
-              <li>Hearing Fund UK Annual Gala - 2018 for Bells Backline</li>
-              <li>
-                Various themed marquee private parties throughout 2018 &amp;
-                2019 for SVL Hire
-              </li>
-              <li>
-                ABC &amp; Support at Easterbrook Hall Dumfries - June 2016 for
-                SVL Hire
-              </li>
-            </ul>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>Lighting Engineer</b>
-            </p>
-          </Col>
-          <Col sm="9">
-            <ul class="list-unstyled">
-              <li>
-                Message Trust Higher Tours in Cambridge, Wales, Midlands and
-                Yorkshire (and Operator) for MTS Live
-              </li>
-              <li>
-                Christmas Live at Doncaster Racecourse (and Operator from 2015)
-                - 2013 - 2017 for SVL Hire
-              </li>
-              <li>
-                Skeleton Coast Festival at Leasowe Castle (and Operator) -
-                August 2018 for MTS Live
-              </li>
-              <li>
-                Ireby Folk Festival Cumbria (and Operator) - 2017 &amp; 2018 for
-                SVL Hire
-              </li>
-              <li>
-                Warrington Music Festival - 2018 &amp; 2019 for dBS Solutions
-              </li>
-              <li>
-                Kevin and Karen Dance Tour (Cover Engineer/Operator) - June 2018
-                for dBS Solutions and Adam Nicholls
-              </li>
-              <li>
-                Status Quo at Queen of the South FC June (and House Console
-                Operator) - 2015 for SVL Hire
-              </li>
-              <li>
-                Lowther Castle Halloween Architectural Lighting - 2013 - 2016
-                &amp; 2018 for SVL Hire
-              </li>
-            </ul>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>LED Screen Engineer</b>
-            </p>
-          </Col>
-          <Col sm="9">
-            <ul class="list-unstyled">
-              <li>
-                Giants Live Strongest Man competitions in Sheffield &amp; Leeds
-                Arenas - 2019 for MTS Live (Chauvet PVP5 Wall)
-              </li>
-              <li>
-                LZ7 Illuminate Tour at Indigo at the o2 London December - 2018
-                for MTS Live (Chauvet PVP5 Wall)
-              </li>
-            </ul>
           </Col>
         </Row>
       </Col>
