@@ -26,24 +26,26 @@ const SiteNav = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/" activeClassName="active" className="nav-link">
+              <Link to="/" className="nav-link" activeClassName="active">
                 Home
               </Link>
             </NavItem>
             <NavItem>
               <Link
-                to="/experience/"
-                activeClassName="active"
+                to="/experience"
                 className="nav-link"
+                activeClassName="active"
+                partiallyActive={true}
               >
                 Experience
               </Link>
             </NavItem>
             <NavItem>
               <Link
-                to="/previouswork/"
-                activeClassName="active"
+                to="/previouswork"
                 className="nav-link"
+                activeClassName="active"
+                partiallyActive={true}
               >
                 Previous Work
               </Link>
