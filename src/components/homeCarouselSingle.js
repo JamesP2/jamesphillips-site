@@ -31,9 +31,13 @@ const HomeCarouselSingle = props => {
     }
   `)
 
+  console.log(data)
+
   const image = data.images.edges.find(n =>
     n.node.relativePath.includes(item.src)
   )
+
+  console.log(image)
 
   return (
     <>
