@@ -22,7 +22,7 @@ const HomeCarouselSingle = props => {
             name
             childImageSharp {
               fixed(width: 1920, height: 512) {
-                ...GatsbyImageSharpFixed_tracedSVG
+                ...GatsbyImageSharpFixed
               }
             }
           }
