@@ -97,21 +97,21 @@ const ExperiencePage = () => (
                   <th colSpan="2">Production Management</th>
                 </tr>
                 <tr>
-                  <td class="text-right">2017 - 2019</td>
+                  <td className="text-right">2017 - 2019</td>
                   <td>
                     Christmas Live at Doncaster Racecourse for SVL Hire (also
                     Lighting Design)
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2017 - 2019</td>
+                  <td className="text-right">2017 - 2019</td>
                   <td>
                     University of Manchester Graduation Ball for University of
                     Manchester Students Union
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2018</td>
+                  <td className="text-right">2018</td>
                   <td>
                     DoubleTree By Hilton Hull Grand Opening June for SVL Hire
                     (also Lighting Design)
@@ -121,25 +121,25 @@ const ExperiencePage = () => (
                   <th colSpan="2">Lighting Design</th>
                 </tr>
                 <tr>
-                  <td class="text-right">2020</td>
+                  <td className="text-right">2020</td>
                   <td>
                     Queen Symphonic: A Rock Orchestra Experience UK Tour for dBS
                     Solutions
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2018 - 2019</td>
+                  <td className="text-right">2018 - 2019</td>
                   <td>
                     Various themed private marquee parties &amp; weddings for
                     SVL Hire
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2018</td>
+                  <td className="text-right">2018</td>
                   <td>Hearing Fund UK Annual Gala for Bells Backline</td>
                 </tr>
                 <tr>
-                  <td class="text-right">2016</td>
+                  <td className="text-right">2016</td>
                   <td>
                     ABC &amp; Support at Easterbrook Hall Dumfries for SVL Hire
                   </td>
@@ -148,54 +148,54 @@ const ExperiencePage = () => (
                   <th colSpan="2">Console Operator</th>
                 </tr>
                 <tr>
-                  <td class="text-right">2018 - 2020</td>
+                  <td className="text-right">2018 - 2020</td>
                   <td>Message Trust Higher Tours for MTS Live</td>
                 </tr>
                 <tr>
-                  <td class="text-right">2017 - 2019</td>
+                  <td className="text-right">2017 - 2019</td>
                   <td>Ireby Folk Festival Cumbria for SVL Hire</td>
                 </tr>
 
                 <tr>
-                  <td class="text-right">2018</td>
+                  <td className="text-right">2018</td>
                   <td>
                     Kevin and Karen Dance Tour (Cover Engineer/Operator) for
                     Adam Nicholls
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2015 - 2017</td>
+                  <td className="text-right">2015 - 2017</td>
                   <td>Christmas Live at Doncaster Racecourse for SVL Hire</td>
                 </tr>
                 <tr>
                   <th colSpan="2">Lighting Engineer</th>
                 </tr>
                 <tr>
-                  <td class="text-right">2018 &amp; 2019</td>
+                  <td className="text-right">2018 &amp; 2019</td>
                   <td>Warrington Music Festival for dBS Solutions</td>
                 </tr>
                 <tr>
-                  <td class="text-right">2019</td>
+                  <td className="text-right">2019</td>
                   <td>
                     Ultimate Strongman: Team World Championship Nottingham Arena
                     for MTS Live
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2013 - 2016, 2018 - 2019</td>
+                  <td className="text-right">2013 - 2016, 2018 - 2019</td>
                   <td>
                     Lowther Castle halloween architectural lighting for SVL Hire
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2019</td>
+                  <td className="text-right">2019</td>
                   <td>
                     After Races entertainment at Haydock Park &amp; York
                     Racecourses for Audiorent Clair AG
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2015</td>
+                  <td className="text-right">2015</td>
                   <td>
                     Status Quo at Queen of the South FC June (and House Console
                     Operator) or SVL Hire
@@ -206,14 +206,14 @@ const ExperiencePage = () => (
                   <th colSpan="2">LED Screen Engineer</th>
                 </tr>
                 <tr>
-                  <td class="text-right">2019 - 2020</td>
+                  <td className="text-right">2019 - 2020</td>
                   <td>
                     Giants Live Strongest Man competitions in various UK Arenas
                     for MTS Live (Chauvet PVP5)
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-right">2019</td>
+                  <td className="text-right">2019</td>
                   <td>Various corporate events for Sparq (Absen A3 Pro)</td>
                 </tr>
               </tbody>
