@@ -10,7 +10,7 @@ import {
 } from "reactstrap"
 import LogoImage from "../content/images/logo.svg"
 
-const Header = () => {
+const SiteNav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -55,4 +55,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default SiteNav

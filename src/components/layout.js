@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Header from "./header"
+import SiteNav from "./siteNav"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./layout.css"
 import { Container } from "reactstrap"
@@ -16,7 +16,7 @@ import { Container } from "reactstrap"
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
+      <SiteNav />
       <Container className="pad-top">
         {children}
 
