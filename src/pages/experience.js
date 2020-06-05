@@ -10,10 +10,6 @@ const ExperiencePage = () => (
     <Layout>
       <SEO title="Home" />
       <Col md="12">
-        <p className="text-center">
-          For a PDF CV please click <a href="#">here</a>.
-        </p>
-
         <h2 className="thin">Experience</h2>
         <Row>
           <Col md="12">
