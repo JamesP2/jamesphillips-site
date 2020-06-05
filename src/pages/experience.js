@@ -2,10 +2,48 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Row, Col, Table } from "reactstrap"
+import { Row, Col } from "reactstrap"
 import ExtLink from "../components/extLink"
-import ExperienceEntry from "../components/experienceEntry"
-import ExperienceHeader from "../components/experienceHeader"
+
+const ExperienceEntry = ({ date, entry, name, children }) => {
+  // If there is a date the left hand side of this entry is pulled right
+  // Otherwise this is a category kind of thing, so bold and left
+  const left =
+    date == null ? (
+      <p className="font-weight-bold">{name}</p>
+    ) : (
+      <p className="text-lg-right">{date}</p>
+    )
+  return (
+    <Row>
+      <Col sm="3">{left}</Col>
+      <Col sm="9">
+        <p>{entry == null ? children : entry}</p>
+      </Col>
+    </Row>
+  )
+}
+
+const ExperienceHeader = ({ name }) => (
+  <Row>
+    <Col md="12">
+      <p className="font-weight-bold">{name}</p>
+    </Col>
+  </Row>
+)
+
+const ExperienceRoles = ({ company, url, children }) => (
+  <>
+    <Col md="2">
+      <p className="font-weight-bold">
+        <ExtLink href={url} text={company} />
+      </p>
+    </Col>
+    <Col md="4">
+      <p>{children}</p>
+    </Col>
+  </>
+)
 
 const ExperiencePage = () => (
   <>
@@ -22,70 +60,44 @@ const ExperiencePage = () => (
           </Col>
         </Row>
         <Row>
-          <Col md="12">
-            <Table borderless responsive>
-              <tbody>
-                <tr>
-                  <th>
-                    <ExtLink href="http://www.mtslive.co.uk/" text="MTS Live" />
-                  </th>
-                  <td>
-                    Lighting Design &amp; Engineer, <br />
-                    LED Screen Engineer, A/V, Audio <br />
-                    Warehouse
-                  </td>
-                  <th>
-                    <ExtLink
-                      href="https://www.lightinitiative.com/"
-                      text="Light Initiative"
-                    />
-                  </th>
-                  <td>
-                    Lighting Engineer, <br />
-                    (TV Set LED Installation)
-                  </td>
-                </tr>
-                <tr>
-                  <th>
-                    <ExtLink
-                      href="http://www.svlhire.co.uk/"
-                      text="SVL Hire Ltd"
-                    />
-                  </th>
-                  <td>
-                    Lighting Design &amp; Engineer, <br />
-                    Production Management
-                  </td>
-                  <th>
-                    <ExtLink
-                      href="https://www.audiorentclair.com/"
-                      text="AudioRent Clair"
-                    />
-                  </th>
-                  <td>Lighting Engineer</td>
-                </tr>
-                <tr>
-                  <th>
-                    <ExtLink
-                      href="http://www.dbs-solutions.co.uk/"
-                      text="dBS Solutions"
-                    />
-                  </th>
-                  <td>
-                    Lighting Design &amp; Engineer, <br />
-                    General Tech
-                  </td>
-                  <th>
-                    <ExtLink href="https://www.sparq.live/" text="Sparq" />
-                  </th>
-                  <td>
-                    LED Screen Engineer, <br />
-                    A/V Engineer
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-          </Col>
+          <ExperienceRoles company="MTS Live" url="http://www.mtslive.co.uk/">
+            Lighting Design &amp; Engineer, <br />
+            LED Screen Engineer, A/V, Audio <br />
+            Warehouse
+          </ExperienceRoles>
+          <ExperienceRoles
+            company="Light Initiative"
+            url="https://www.lightinitiative.com/"
+          >
+            Lighting Engineer, <br />
+            (TV Set LED Installation)
+          </ExperienceRoles>
+        </Row>
+        <Row>
+          <ExperienceRoles company="SVL Hire" url="http://www.svlhire.co.uk/">
+            Lighting Design &amp; Engineer, <br />
+            Production Management
+          </ExperienceRoles>
+          <ExperienceRoles
+            company="AudioRent Clair"
+            url="https://www.audiorentclair.com/"
+          >
+            Lighting Engineer
+          </ExperienceRoles>
+        </Row>
+        <Row>
+          <ExperienceRoles
+            company="dBS Solutions"
+            url="http://www.dbs-solutions.co.uk/"
+          >
+            Lighting Design &amp; Engineer, <br />
+            General Tech
+          </ExperienceRoles>
+          <ExperienceRoles company="Sparq" url="https://www.sparq.live/">
+            LED Screen Engineer,
+            <br />
+            A/V Engineer
+          </ExperienceRoles>
         </Row>
 
         <hr />
@@ -183,7 +195,7 @@ const ExperiencePage = () => (
           entry="Various corporate events for Sparq (Absen A3 Pro)
           "
         />
-        
+
         <hr />
 
         <h2 className="thin">Employment History</h2>
@@ -299,49 +311,20 @@ const ExperiencePage = () => (
         <hr />
 
         <h2 className="thin">Qualifications &amp; Training</h2>
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>Degree</b>
-            </p>
-          </Col>
-          <Col sm="9">
-            <p>
-              <b>2014 - 2017</b> University of Manchester
-              <br />
-              BSc (hons) Computer Science - 1st Class
-            </p>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>Licences &amp; Tickets</b>
-            </p>
-          </Col>
-          <Col sm="9">
-            <p>
-              Full UK Driving Licence
-              <br />
-              IPAF 3a &amp; 3b
-            </p>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col sm="3">
-            <p>
-              <b>Other Training</b>
-            </p>
-          </Col>
-          <Col sm="9">
-            <p>
-              <b>March 2017</b> UK Rigging Training: Three Day Rigging for the
-              Entertainment Industry
-            </p>
-          </Col>
-        </Row>
+        <ExperienceEntry name="Degree">
+          <b>2014 - 2017</b> University of Manchester
+          <br />
+          BSc (hons) Computer Science - 1st Class
+        </ExperienceEntry>
+        <ExperienceEntry name="Licences &amp; Tickets">
+          Full UK Driving Licence
+          <br />
+          IPAF 3a &amp; 3b
+        </ExperienceEntry>
+        <ExperienceEntry name="Other Training">
+          <b>March 2017</b> UK Rigging Training: Three Day Rigging for the
+          Entertainment Industry
+        </ExperienceEntry>
       </Col>
     </Layout>
   </>
