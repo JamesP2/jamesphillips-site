@@ -21,9 +21,12 @@ const IndexPage = () => (
           <ul>
             <li>Lighting Engineering</li>
             <li>Lighting Design</li>
-            <li>Lighting Programming/Operating (with own Console if desired)</li>
+            <li>
+              Lighting Programming/Operating (with own Console if desired)
+            </li>
             <li>Pre-Production Drawings, CAD and Site Plans</li>
             <li>LED/Video Engineering</li>
+            <li>Audio Engineering</li>
           </ul>
         </Col>
         <Col md="5">
@@ -40,7 +43,10 @@ const IndexPage = () => (
           <p>
             <b>Phone:</b> 07429 353 608
             <br />
-            <b>Email: </b> <a href="mailto:james@jp2.me.uk">james@jp2.me.uk</a>
+            <b>Email: </b>{" "}
+            <a href="mailto:james@jamesphillips.me.uk">
+              james@jamesphillips.me.uk
+            </a>
           </p>
         </Col>
         <Col md={{ size: 5, order: 1 }}>
