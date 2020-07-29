@@ -181,19 +181,17 @@ const ExperiencePage = () => (
         <ExperienceEntry
           date="2015"
           entry="Status Quo at Queen of the South FC June (and House Console
-          Operator) or SVL Hire"
+          Operator) for SVL Hire"
         />
 
         <ExperienceHeader name="LED Screen Engineer" />
         <ExperienceEntry
           date="2019 - 2020"
-          entry="Giants Live Strongest Man competitions in various UK Arenas for MTS Live (Chauvet PVP5)
-          "
+          entry="Giants Live Strongest Man competitions in various UK Arenas for MTS Live (Chauvet PVP5)"
         />
         <ExperienceEntry
           date="2019"
-          entry="Various corporate events for Sparq (Absen A3 Pro)
-          "
+          entry="Various corporate events for Sparq (Absen A3 Pro)"
         />
 
         <hr />
