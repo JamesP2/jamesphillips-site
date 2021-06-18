@@ -13,7 +13,7 @@ const items = [
     src: "images/carousel/1.jpg",
     altText: "Lighting Console",
     header: "James Phillips",
-    caption: "Freelance Lighting and Event Engineer",
+    caption: "Lighting and Event Engineer",
     buttonText: "My Experience",
     buttonLink: "/experience",
   },
